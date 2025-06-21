@@ -1,7 +1,13 @@
+import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import React from "react";
 
 const HeroSection = () => {
+  useGSAP(() => {
+    const heroSplit = new SplitText(".title", { type: "chars,words" });
+    const paragraphSplit = new SplitText(".subtitle", { type: "chars,words" });
+  });
+
   return (
     <>
       <section id="hero" className="noisy">
